@@ -1,0 +1,33 @@
+.nav {
+  width: 100%;
+  display: table;
+}
+
+.nav-element {
+  @include box_sizing();
+  width: 50%;
+  display: table-cell;
+  text-align: center;
+  vertical-align: bottom;
+  background: #000;
+  color: #fff;
+
+  &:hover {
+    background: #f3f3f3;
+  }
+  &:active {
+    box-shadow: inset 0 1px 2px rgba(#000, .2);
+  }
+}
+
+@mixin nav_element($width) {
+  @extend .nav-element;
+}
+
+.nav-ele3 {
+  @include nav_element(33.333333%);
+}
+
+.nav-ele4 {
+  @include nav_element(25%%);
+}
